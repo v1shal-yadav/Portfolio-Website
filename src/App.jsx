@@ -1,16 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+/* eslint-disable react/no-unescaped-entities */
+
+import "./App.css";
+
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Aside from "./components/Aside";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-        <h1 color='white'>Hello vishal</h1>
+      <Aside/>
+      <div className="main-content">
+       <Navbar/>
+        <section style={{
+          scrollBehavior: "smooth"
+        }}><Outlet/></section>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
