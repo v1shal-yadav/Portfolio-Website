@@ -1,165 +1,116 @@
-/* eslint-disable react/no-unescaped-entities */
+import { GiCalendar, GiClawSlashes, GiMailbox, GiMayanPyramid, GiPhone } from "react-icons/gi";
 
-import { useEffect, useState } from "react"
-import Testimonial from "./Testimonial";
-import Service from "./Service";
-
-const servicesData = [
-  {
-    icon: "/images/icon-design.svg",
-    title: "Web design",
-    description: "The most modern and high-quality design made at a professional level."
-  },
-  {
-    icon: "/images/icon-dev.svg",
-    title: "Web development",
-    description: "High-quality development of sites at the professional level."
-  },
-  {
-    icon: "/images/icon-app.svg",
-    title: "Mobile apps",
-    description: "Professional development of applications for iOS and Android."
-  },
-  {
-    icon: "/images/icon-photo.svg",
-    title: "Photography",
-    description: "I make high-quality photos of any category at a professional level."
-  }
-];
-
-
-const About = () => {
-  const [testimonials , setTestimonials ] = useState([]);
-  useEffect(()=> {
-    fetch('testimonials.json').then(res => res.json()).then(data => {
-      console.log(data)
-      setTestimonials(data)
-    });
-  }, [])
+const Aside = () => {
   return (
-    <article className="about  active" data-page="about">
-
-    <header>
-      <h2 className="h2 article-title">About me</h2>
-    </header>
-
-    <section className="about-text">
-      <p>
-        I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-        I enjoy
-        turning complex problems into simple, beautiful and intuitive designs.
-      </p>
-
-      <p>
-        My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-        Moreover, I
-        add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-        across your
-        message and identity in the most creative way. I created web design for many famous brand companies.
-      </p>
-    </section>
-
-
-    {/* <!--
-      - service
-    --> */}
-
-    <section className="service">
-
-      <h3 className="h3 service-title">What i'm doing</h3>
-
-      <ul className="service-list">
-
-      {servicesData.map((service, index) => (
-            <Service
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
+    <aside className="sidebar">
+        <div className="sidebar-info">
+          <figure className="avatar-box">
+            <img
+              src={"/images/mamun.jpg"}
+              alt="Richard hanrick"
+              width="80"
             />
-          ))}
+          </figure>
 
-      </ul>
+          <div className="info-content">
+            <h1 className="name" title="Richard hanrick">
+              Md AL Mamun
+            </h1>
 
-    </section>
+            <p className="title">Web developer</p>
+          </div>
 
+          <button className="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
 
-    {/* <!--
-      - testimonials
-    --> */}
+            <GiClawSlashes />
+          </button>
+        </div>
 
-    <section className="testimonials">
+        <div className="sidebar-info_more">
+          <div className="separator"></div>
 
-      <h3 className="h3 testimonials-title">Testimonials</h3>
+          <ul className="contacts-list">
+            <li className="contact-item">
+              <div className="icon-box">
+                <GiMailbox/>
+                
+              </div>
 
-      <ul className="testimonials-list has-scrollbar">
+              <div className="contact-info">
+                <p className="contact-title">Email</p>
 
-      {testimonials.map((testimonial, index) => (
-            <Testimonial
-              key={index}
-              name={testimonial.name}
-              avatar={testimonial.avatar}
-              testimonial={testimonial.testimonial}
-            />
-          ))}
+                <a href="mailto:richard@example.com" className="contact-link">
+                  richard@example.com
+                </a>
+              </div>
+            </li>
 
-      </ul>
+            <li className="contact-item">
+              <div className="icon-box">
+                <GiPhone/>
+              </div>
 
-    </section>
+              <div className="contact-info">
+                <p className="contact-title">Phone</p>
 
+                <a href="tel:+12133522795" className="contact-link">
+                  +1 (213) 352-2795
+                </a>
+              </div>
+            </li>
 
-    {/* <!--
-      - clients
-    --> */}
+            <li className="contact-item">
+              <div className="icon-box">
+                <GiCalendar/>
+               
+              </div>
 
-    <section className="clients">
+              <div className="contact-info">
+                <p className="contact-title">Birthday</p>
 
-      <h3 className="h3 clients-title">Clients</h3>
+                <time dateTime="1982-06-23">June 23, 1982</time>
+              </div>
+            </li>
 
-      <ul className="clients-list has-scrollbar">
+            <li className="contact-item">
+              <div className="icon-box">
+                <GiMayanPyramid/>
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
 
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-1-color.png" alt="client logo"/>
-          </a>
-        </li>
+              <div className="contact-info">
+                <p className="contact-title">Location</p>
 
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-2-color.png" alt="client logo"/>
-          </a>
-        </li>
+                <address>Sacramento, California, USA</address>
+              </div>
+            </li>
+          </ul>
 
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-3-color.png" alt="client logo"/>
-          </a>
-        </li>
+          <div className="separator"></div>
 
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-4-color.png" alt="client logo"/>
-          </a>
-        </li>
+          <ul className="social-list">
+            <li className="social-item">
+              <a href="#" className="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
 
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-5-color.png" alt="client logo"/>
-          </a>
-        </li>
+            <li className="social-item">
+              <a href="#" className="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
 
-        <li className="clients-item">
-          <a href="#">
-            <img src="images/logo-6-color.png"alt="client logo"/>
-          </a>
-        </li>
-
-      </ul>
-
-    </section>
-
-  </article>
+            <li className="social-item">
+              <a href="#" className="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
   )
 }
 
-export default About
+export default Aside
