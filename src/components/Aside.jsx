@@ -7,14 +7,14 @@ const Aside = () => {
           <figure className="avatar-box">
             <img
               src={"/images/mamun.jpg"}
-              alt="Richard hanrick"
+              alt="Vishal Yadav"
               width="80"
             />
           </figure>
 
           <div className="info-content">
-            <h1 className="name" title="Richard hanrick">
-              Md AL Mamun
+            <h1 className="name" title="Vishal Yadav">
+              Vishal Yadav
             </h1>
 
             <p className="title">Web developer</p>
@@ -40,8 +40,8 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Email</p>
 
-                <a href="mailto:richard@example.com" className="contact-link">
-                  richard@example.com
+                <a href="mailto:yaimvishal@gmail.com" className="contact-link">
+                  yaimvishal@gmail.com
                 </a>
               </div>
             </li>
@@ -55,7 +55,7 @@ const Aside = () => {
                 <p className="contact-title">Phone</p>
 
                 <a href="tel:+12133522795" className="contact-link">
-                  +1 (213) 352-2795
+                  +91 (852) 813-0595
                 </a>
               </div>
             </li>
@@ -69,7 +69,7 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Birthday</p>
 
-                <time dateTime="1982-06-23">June 23, 1982</time>
+                <time dateTime="2001-10-11">Oct 11, 2001</time>
               </div>
             </li>
 
@@ -82,7 +82,7 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Location</p>
 
-                <address>Sacramento, California, USA</address>
+                <address>Varansi, Uttar Pradesh, India</address>
               </div>
             </li>
           </ul>
