@@ -45,17 +45,18 @@ const About = () => {
 
     <section className="about-text">
       <p>
-        I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-        I enjoy
-        turning complex problems into simple, beautiful and intuitive designs.
+      I am a final year student pursuing a Bachelor of Technology focused in Electronics and Communication Engineering from Bundelkhand Institute of Engineering and Technology, Jhansi(UP). I spent time building my skills in competitive programming, data structures and algorithms.Enthusiastic coder eager to contribute to team success through hard work, attention to detail, and excellent organizational skills. I thrive in environments where I am able to utilize my abilities in complex problem-solving to find solutions and achieve results.
       </p>
 
       <p>
-        My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-        Moreover, I
-        add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-        across your
-        message and identity in the most creative way. I created web design for many famous brand companies.
+        
+      ✔️ My skills include:
+      • Languages: C, C++, Python, JavaScript 
+      • Frontend: HTML ,CSS , JavaScript, React ,Bootstrap
+      • Backend: Nodejs,Express.js,Mongodb
+      • Databases : SQL
+      • Data structures and algorithms: Competitive programming, OOPS, Problem solving
+      • Software Engineering tools: Git and GitHub .
       </p>
     </section>
 
